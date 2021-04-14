@@ -219,7 +219,7 @@ struct state_history_plugin_impl : std::enable_shared_from_this<state_history_pl
          if (fetch_block_header) {
             std::visit([&result](auto block_ptr) {
                if (block_ptr) {
-                  result.block_header = static_cast<const block_header&>(*block_ptr);
+                  result.block_header = static_cast<const signed_block_header&>(*block_ptr);
                }
             }, plugin->get_block(block_num));
          }

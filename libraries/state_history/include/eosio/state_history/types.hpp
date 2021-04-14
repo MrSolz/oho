@@ -296,7 +296,7 @@ struct get_blocks_result_v2 {
    std::optional<block_position> this_block;
    std::optional<block_position> prev_block;
    signed_block_ptr_variant               block; // packed as opaque<fc::variant<signed_block_v0, signed_block>>
-   opaque<chain::block_header>            block_header;
+   opaque<chain::signed_block_header>     block_header;
    opaque<std::vector<transaction_trace>> traces;
    opaque<std::vector<table_delta>>       deltas;
    bool has_value() const {
