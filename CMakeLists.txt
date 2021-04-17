@@ -18,7 +18,7 @@ include( GNUInstallDirs )
 include( InstallDirectoryPermissions )
 include( MASSigning )
 
-set( BLOCKCHAIN_NAME "EOSIO" )
+set( BLOCKCHAIN_NAME "OHO NETWORK" )
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_EXTENSIONS ON )
 set( CXX_STANDARD_REQUIRED ON)
@@ -34,9 +34,9 @@ else()
     set(VERSION_FULL "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 endif()
 
-set( CLI_CLIENT_EXECUTABLE_NAME cleos )
-set( NODE_EXECUTABLE_NAME nodeos )
-set( KEY_STORE_EXECUTABLE_NAME keosd )
+set( CLI_CLIENT_EXECUTABLE_NAME cloho )
+set( NODE_EXECUTABLE_NAME nodeoho )
+set( KEY_STORE_EXECUTABLE_NAME kohod )
 
 # http://stackoverflow.com/a/18369825
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
@@ -138,7 +138,7 @@ endif()
 include(utils)
 
 if ("${CORE_SYMBOL_NAME}" STREQUAL "")
-  set( CORE_SYMBOL_NAME "SYS" )
+  set( CORE_SYMBOL_NAME "OHO" )
 endif()
 string(TOUPPER ${CORE_SYMBOL_NAME} CORE_SYMBOL_NAME)
 
